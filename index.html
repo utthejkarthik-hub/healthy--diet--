@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Healthy Diet — Food Details</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Healthy Diet — Food Details</h1>
+    <p class="subtitle">Browse healthy food options, view nutrition, ingredients and serving guidance.</p>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search foods or nutrients (e.g. protein, fiber)" />
+      <select id="category">
+        <option value="">All categories</option>
+        <option value="Breakfast">Breakfast</option>
+        <option value="Salad">Salad</option>
+        <option value="Main">Main</option>
+        <option value="Snack">Snack</option>
+        <option value="Beverage">Beverage</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section id="foods" class="food-grid" aria-live="polite"></section>
+  </main>
+
+  <!-- Detail drawer/modal -->
+  <div id="detail" class="detail hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <button id="detail-close" class="close">×</button>
+    <div class="detail-inner">
+      <img id="detail-image" src="" alt="" />
+      <h2 id="detail-name"></h2>
+      <p id="detail-category" class="muted"></p>
+      <div id="detail-desc"></div>
+      <h3>Nutrition (per serving)</h3>
+      <ul id="detail-nutrition" class="nutrition"></ul>
+      <h3>Ingredients</h3>
+      <ul id="detail-ingredients"></ul>
+      <h3>Serving guidance</h3>
+      <p id="detail-serving"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <small>Example healthy-diet app • Run the included Express API to serve data</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
